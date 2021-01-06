@@ -1,4 +1,2 @@
-#ledSignServer
-Web interface for LED sign project.
-
-
+# ledSignServer
+Web interface for LED sign project
