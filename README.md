@@ -24,7 +24,16 @@ When deciding on this project there were 2 specific design goals and 1 supplimen
 > ToDo / Upcoming features
 - Removing control of timing from the PIC and instead using a hardware circuit and interrupts on the PIC.
 - Addition of basic transition features and dynamic effects over time
+- Hardware intergration for:
+  - Serial
+  - USB
+  - Programmable plug (Possibly using DB9, RJ45, JST-XH, or dupont)
 - Interface with a network based microcontroller. PIC functions strictly as graphics processor.
+- Start doing what this is all been for, have fun! Be creative! Some ideas I've had have been:
+  - Video games controlled by:
+    - RF / Wifi / BT using a custom remote controller
+    - Serial
+    - Custom glove/interface using MPU-6050
 
 # Lessons learned
 - There are ICs or special LEDs with built in microcontrollers for individual addressing, such as the SK6812, which can
