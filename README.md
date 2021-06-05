@@ -1,8 +1,14 @@
 # Smart LED Display
 This is the firmware for a smart LED display. The display consists of a 54 x 18 LED grid using red 5mm LEDs, 74HC595 shift registers, and 4017 decade counters as well additionall hardware for the timing circuitry, hardware I/O, and with the server microctonroller.
 
-> Design goals
-When deciding on this project there were 2 specific design goals and 1 supplimentary goal which I've centered my focus
+> Design goals, why did I build this project?
+ 
+When deciding on this project there were 3 specific learning objectives I wanted to achieve:
+1) Most of my previous projects were largely software and I wanted experience with electronic circuit design on a much larger scale than I had done previously
+2) Create a peice of software designed specifically to act as firmware using C
+3) Create a project that uses multiple microcontrollers for specific functions
+After deciding on this project and working through it I decided on the following goals as well:
+1) Gain experience creating hardware interfaces such as USB, ethernet/RJ-45, and/or RS-232
 
 # The Hardware
 - 972 red 5mm LEDs
