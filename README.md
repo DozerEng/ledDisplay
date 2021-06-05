@@ -7,6 +7,7 @@ When deciding on this project there were 3 specific learning objectives I wanted
 1) Most of my previous projects were largely software and I wanted experience with electronic circuit design on a much larger scale than I had done previously
 2) Create a peice of software designed specifically to act as firmware using C
 3) Create a project that uses multiple microcontrollers for specific functions
+
 After deciding on this project and working through it I decided on the following goals as well:
 1) Gain experience creating hardware interfaces such as USB, ethernet/RJ-45, and/or RS-232
 
@@ -42,7 +43,10 @@ After deciding on this project and working through it I decided on the following
     - Custom glove/interface using MPU-6050
 
 # Lessons learned
-- There are ICs or special LEDs with built in microcontrollers for individual addressing, such as the SK6812, which can
+- There are ICs or special LEDs with built in microcontrollers for individual addressing, such as the SK6812, which can make managing far more LEDs a lot more managable as well as possibly removing the complexity of multiplexing and the need for a second microcontroller.
+- There is a time and place for breadboards and protoboards, you can't always just create a PCB for everything right away. This project was one of those times!
+- The value of note taking/keeping a project log book.
+- Greatly developed oscilloscope abilities during this project
 
 # Next generation
 - PCB based LED panel as well as hardware
