@@ -12,6 +12,7 @@
 #include <stdlib.h>
 
 #include "initializeHardware.h"
+#include "ledDisplay.h"
 
 // initializeHardware:**********************************************************
 // Function Name: initializeHardware
@@ -27,31 +28,11 @@ void initializeHardware(void)
     //printf("\n\rInitializing PIC18F45K22...\r\n");
     set_osc_p18f45k22_16MHz();
     
-    /* 
-     * LED matrix port designations 
-     *      - SER_0 is always used and SER_1 thru SER6 allow segmentation of the 
-     *      shift registers allowing parallel data into the 7 shift registers
-     */
-    SR_SER_PORT = ALL_LED_OFF;
-    SR_SER_TRIS = PORT_DIGITAL;
-    
-    /* Control pin set up */
-    SR_CONTROL = ALL_LED_OFF;
-    SR_CNTL_TRIS = PORT_OUTPUT;
-    ANSELC = PORT_DIGITAL;    
-
-    /* Configure PORTBbits RB0 to RB5 as switch inputs. RB6 and RB7 are for programming interface */
-    SWITCHES = 0x00;
-//    TRISB |= 0b00000011;
-    TRISBbits.RB0 = PIN_INPUT;
-    TRISBbits.RB1 = PIN_INPUT;
-    ANSELB = PORT_DIGITAL;
+    initializeLedDisplay();
 
     /* Enable interrupt priority */
     RCONbits.IPEN = 1;
 
-    /* Make receive interrupt high priority */
-    IPR1bits.RCIP = 1;
 
     /* Enable all high priority interrupts */
     INTCONbits.GIEH = 1;
